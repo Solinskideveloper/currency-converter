@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="container__top">
+            <h2 class="container__header">Kalkulator walut</h2>
+            </div>
+        </header>
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <p>
+                    <label>
+                        <span class="form__labelText">
+                            Kwota do wymainy (PLN):
+                        </span>
+                        <input class="form__field js-sum" type="number" step="any" min="1" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText ">
+                            Waluta:</span>
+                        <select name="currency" class="form__field js-currency">
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="USD">USD</option>
+                            <option value="CHF">CHF</option>
+                        </select>
+                    </label>
+                </p>
+
+            </fieldset>
+            <div class="form__container">
+                <button class="form__button js-button" type="submit"> Przelicz </button>
+                <p class="form__paragraphResult js-result"></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
