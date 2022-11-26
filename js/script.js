@@ -1,37 +1,48 @@
-console.log("Witam na moim kantorze walut");
+{
+    const calculateResult = (sum, currency) => {
+        const rateEUR = 4.6827;
+        const rateGBP = 5.3367;
+        const rateUSD = 4.9823;
+        const rateCHF = 4.8172;
+        switch (currency) {
+            case "EUR":
+                return sum / rateEUR;
 
-let formElemnt = document.querySelector(".js-form");
-let sumElement = document.querySelector(".js-sum");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
+            case "GBP":
+                return sum / rateGBP;
 
-let rateEUR = 4.6827;
-let rateGBP = 5.3367;
-let rateUSD = 4.9823;
-let rateCHF = 4.8172;
+            case "USD":
+                return sum / rateUSD;
+
+            case "CHF":
+                return sum / rateCHF;
+
+        }
+    };
+
+    const updateResultText = (sum, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `${sum.toFixed(2)} PLN = <strong> ${result.toFixed(2)} ${currency} </strong>`;
+    }
+    const onFormSubmit = () => {
+        event.preventDefault();
+
+        const sumElement = document.querySelector(".js-sum");
+        const currencyElement = document.querySelector(".js-currency");
 
 
-formElemnt.addEventListener("submit", (event) => {
-    event.preventDefault();
+        const sum = +sumElement.value;
+        const currency = currencyElement.value;
 
-    let sum = +sumElement.value;
-    let currency = currencyElement.value;
-    let result;
+        const result = calculateResult(sum, currency)
 
-    switch (currency) {
-        case "EUR":
-            result = sum / rateEUR;
-            break;
-        case "GBP":
-            result = sum / rateGBP;
-            break;
-        case "USD":
-            result = sum / rateUSD;
-            break;
-        case "CHF":
-            result = sum / rateCHF;
-            break;
+        updateResultText(sum, result, currency);
     }
 
-    resultElement.innerHTML = `${sum.toFixed(2)} PLN = <strong> ${result.toFixed(2)} ${currency} </strong>`;
-});
+    const init = () => {
+        const formElemnt = document.querySelector(".js-form");
+        formElemnt.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
+}
