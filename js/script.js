@@ -21,8 +21,7 @@
     };
 
     const updateResultText = (text) => {
-        const resultElement =
-            document.querySelector(".js-result");
+        const resultElement = document.querySelector(".js-result");
         resultElement.innerHTML = text;
     }
     const onFormSubmit = () => {
