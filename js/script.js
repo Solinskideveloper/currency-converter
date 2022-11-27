@@ -20,9 +20,10 @@
         }
     };
 
-    const updateResultText = (sum, result, currency) => {
-        const resultElement = document.querySelector(".js-result");
-        resultElement.innerHTML = `${sum.toFixed(2)} PLN = <strong> ${result.toFixed(2)} ${currency} </strong>`;
+    const updateResultText = (text) => {
+        const resultElement =
+            document.querySelector(".js-result");
+        resultElement.innerHTML = text;
     }
     const onFormSubmit = () => {
         event.preventDefault();
@@ -36,7 +37,8 @@
 
         const result = calculateResult(sum, currency)
 
-        updateResultText(sum, result, currency);
+        updateResultText(`${sum.toFixed(2)} PLN = <strong> 
+        ${result.toFixed(2)} ${currency} </strong>`);
     }
 
     const init = () => {
