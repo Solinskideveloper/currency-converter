@@ -1,5 +1,5 @@
 # Currency converter
-![Curency-converter](https://github.com/Patryk-Solinski/currency-converter/blob/master/images/currency-converter.png?raw=true)
+![Curency-converter](https://github.com/Patryk-Solinski/currency-converter/blob/master/images/currency-converter2.png?raw=true)
 ## Demo
 [Visit my Currency converter]( https://patryk-solinski.github.io/currency-converter/)
 
