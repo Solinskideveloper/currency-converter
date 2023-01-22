@@ -1,7 +1,7 @@
 # Currency converter
 ![Curency-converter](https://github.com/Patryk-Solinski/currency-converter/blob/master/images/currency-converter3.png?raw=true)
 ## Demo
-[Visit my Currency converter]( https://patryk-solinski.github.io/currency-converter/)
+[Visit my Currency converter]( https://solinskideveloper.github.io/currency-converter/)
 
 ## Description
 This is my second project created in the process of becoming the Frontend Developer. I have created a simple currency conventer that allows you to exchange Polish currency PLN into some other currencies.
